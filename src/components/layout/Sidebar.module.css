@@ -1,0 +1,71 @@
+.sidebar {
+  height: 100vh;
+  background: #111;
+  color: white;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+/* desktop */
+.open {
+  width: 200px;
+}
+
+.closed {
+  width: 60px;
+}
+
+/* mobile mode */
+.mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.mobile.closed {
+  transform: translateX(-100%);
+}
+
+.mobile.open {
+  transform: translateX(0);
+}
+
+/* hamburger */
+.hamburger {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 200;
+  background: #111;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* toggle */
+.toggle {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* menu */
+.menu {
+  list-style: none;
+  padding: 0;
+}
+
+.link {
+  display: block;
+  padding: 10px;
+  color: #ccc;
+  text-decoration: none;
+}
+
+.link:hover {
+  background: #333;
+}
