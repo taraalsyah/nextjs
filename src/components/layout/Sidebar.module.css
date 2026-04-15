@@ -1,18 +1,20 @@
 .sidebar {
   height: 100vh;
-  background: #111;
-  color: white;
-  transition: all 0.3s ease;
+  background: #ffffff;
+  color: #333333;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   overflow: hidden;
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.04);
+  border-right: 1px solid #f0f0f0;
 }
 
 /* desktop */
 .open {
-  width: 200px;
+  width: 240px;
 }
 
 .closed {
-  width: 60px;
+  width: 70px;
 }
 
 /* mobile mode */
@@ -21,6 +23,8 @@
   top: 0;
   left: 0;
   z-index: 100;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
 }
 
 .mobile.closed {
@@ -29,43 +33,95 @@
 
 .mobile.open {
   transform: translateX(0);
+  box-shadow: 10px 0 30px rgba(0, 0, 0, 0.1);
 }
 
 /* hamburger */
 .hamburger {
   position: fixed;
-  top: 10px;
-  left: 10px;
+  top: 12px;
+  left: 12px;
   z-index: 200;
-  background: #111;
-  color: white;
-  border: none;
-  padding: 10px;
+  background: #ffffff;
+  color: #333333;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 8px 12px;
   cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: all 0.2s ease;
+  font-size: 18px;
+}
+
+.hamburger:hover {
+  background: #f8f9fa;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 /* toggle */
 .toggle {
   background: none;
   border: none;
-  color: white;
+  color: #9ca3af;
   cursor: pointer;
-  padding: 10px;
+  padding: 20px;
+  width: 100%;
+  text-align: right;
+  font-size: 18px;
+  transition: color 0.2s ease;
+}
+
+.toggle:hover {
+  color: #0070f3;
 }
 
 /* menu */
 .menu {
   list-style: none;
   padding: 0;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .link {
-  display: block;
-  padding: 10px;
-  color: #ccc;
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  color: #4b5563;
   text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  transition: all 0.2s ease;
+  border-left: 4px solid transparent;
+  margin: 0 8px;
+  border-radius: 8px;
+  gap: 12px;
 }
 
 .link:hover {
-  background: #333;
+  background: #eff6ff;
+  color: #0070f3;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  white-space: nowrap;
+}
+
+/* Apply active-like styling on hover to mimic a premium interface */
+.sidebar.open .link {
+  margin: 0 16px;
+}
+
+.sidebar.closed .link {
+  padding: 12px;
+  justify-content: center;
+  margin: 0 8px;
 }

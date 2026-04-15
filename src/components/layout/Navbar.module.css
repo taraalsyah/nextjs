@@ -3,48 +3,85 @@
   justify-content: space-between;
   align-items: center;
   padding: 16px 40px;
-  background: #111;
-  color: white;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #1a1a1a;
   position: sticky;
   top: 0;
   z-index: 100;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .logo {
-  font-size: 20px;
-  font-weight: bold;
-  letter-spacing: 1px;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, #0070f3, #f81ce5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.logo:hover {
+  opacity: 0.8;
 }
 
 .menu {
   display: flex;
-  gap: 24px;
+  gap: 32px;
+  align-items: center;
 }
 
-.menu a {
-  color: #ddd;
+.menu a:not(.loginBtn) {
+  color: #555555;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 15px;
+  font-weight: 500;
   position: relative;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  padding: 8px 0;
 }
 
-.menu a:hover {
-  color: #fff;
+.menu a:not(.loginBtn):hover {
+  color: #0070f3;
 }
 
 /* underline animation */
-.menu a::after {
+.menu a:not(.loginBtn)::after {
   content: "";
   position: absolute;
   width: 0%;
   height: 2px;
-  background: #00ffcc;
-  left: 0;
-  bottom: -4px;
-  transition: 0.3s;
+  background: linear-gradient(90deg, #0070f3, #f81ce5);
+  left: 50%;
+  bottom: 0px;
+  transform: translateX(-50%);
+  transition: width 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border-radius: 2px;
 }
 
-.menu a:hover::after {
+.menu a:not(.loginBtn):hover::after {
   width: 100%;
+}
+
+/* Special styling for login button */
+.loginBtn {
+  background: linear-gradient(135deg, #0070f3, #f81ce5);
+  color: #ffffff !important;
+  padding: 10px 24px !important;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0, 112, 243, 0.3);
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.loginBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 112, 243, 0.4);
 }
