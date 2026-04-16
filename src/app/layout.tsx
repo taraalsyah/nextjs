@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Footer from '@/components/layout/Footer'
-import Navbar from '@/components/layout/Navbar'
-import Sidebar from '@/components/layout/Sidebar';
+import ConditionalLayout from '@/components/layout/ConditionalLayout';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,15 +24,10 @@ export default function RootLayout({
 }>) {
   return (
     <html>
-      <body>
-        <Navbar />
-        <div style={{ display: "flex" }}>
-          <Sidebar />
-
-          <main style={{ flex: 1, padding: "20px" }}>
-            {children}
-          </main>
-        </div>
+      <body style={{ margin: 0, padding: 0, background: '#f8fafc', color: '#1a1a1a', minHeight: '100vh' }}>
+        <ConditionalLayout>
+          {children}
+        </ConditionalLayout>
       </body>
     </html>
   );

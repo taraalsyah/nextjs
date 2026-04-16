@@ -115,7 +115,7 @@ export default function Sidebar() {
         <ul className={styles.menu}>
           {menu.map((item) => (
             <li key={item.path}>
-              <Link href={item.path} className={styles.link} title={!open ? item.name : undefined}>
+              <Link href={item.path} className={styles.link} data-tooltip={!open ? item.name : undefined}>
                 <span className={styles.icon}>{getIcon(item.name)}</span>
                 {open && <span className={styles.text}>{item.name}</span>}
               </Link>
