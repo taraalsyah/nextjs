@@ -10,10 +10,9 @@ export default function Navbar() {
 
       <div className={styles.menu}>
         <Link href="/">Home</Link>
-        <Link href="/about">About</Link>
-        <Link href="/login" className={styles.loginBtn}>
-          Login
-        </Link>
+        <a href="#" className={styles.loginBtn}>
+          Logout
+        </a>
       </div>
     </nav>
   );
