@@ -1,10 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import styles from "./UserManagement.module.css";
 
 export default function UserManagementPage() {
   // Mock Data for User Management List
-  const users = [
+  const [users, setUsers] = useState([
     {
       id: "USR-001",
       name: "Alice Smith",
@@ -42,18 +43,59 @@ export default function UserManagementPage() {
       name: "Eve Brown",
       email: "eve.brown@company.com",
       role: "Technician",
-      status: "Suspended",
+      status: "Inactive",
       createdDate: "2025-11-05",
     },
-  ];
+  ]);
+  const roles = ["Admin", "Technician", "User"];
+  const statuses = ["Active", "Inactive"];
 
   const getStatusClass = (status) => {
     switch (status) {
       case "Active": return styles.statusActive;
       case "Inactive": return styles.statusInactive;
-      case "Suspended": return styles.statusSuspended;
       default: return "";
     }
+  };
+
+  const handleRoleChange = (userId, currentRole, nextRole) => {
+    if (currentRole === nextRole) {
+      return;
+    }
+
+    const confirmed = window.confirm(
+      `Yakin ingin mengubah role dari ${currentRole} ke ${nextRole}?`
+    );
+
+    if (!confirmed) {
+      return;
+    }
+
+    setUsers((prevUsers) =>
+      prevUsers.map((user) =>
+        user.id === userId ? { ...user, role: nextRole } : user
+      )
+    );
+  };
+
+  const handleStatusChange = (userId, currentStatus, nextStatus) => {
+    if (currentStatus === nextStatus) {
+      return;
+    }
+
+    const confirmed = window.confirm(
+      `Yakin ingin mengubah status dari ${currentStatus} ke ${nextStatus}?`
+    );
+
+    if (!confirmed) {
+      return;
+    }
+
+    setUsers((prevUsers) =>
+      prevUsers.map((user) =>
+        user.id === userId ? { ...user, status: nextStatus } : user
+      )
+    );
   };
 
   return (
@@ -84,11 +126,35 @@ export default function UserManagementPage() {
                     <div className={styles.userName}>{user.name}</div>
                   </td>
                   <td className={styles.userEmail}>{user.email}</td>
-                  <td className={styles.roleText}>{user.role}</td>
                   <td>
-                    <span className={`${styles.badge} ${getStatusClass(user.status)}`}>
-                      {user.status}
-                    </span>
+                    <select
+                      className={styles.roleSelect}
+                      value={user.role}
+                      onChange={(event) =>
+                        handleRoleChange(user.id, user.role, event.target.value)
+                      }
+                    >
+                      {roles.map((role) => (
+                        <option key={role} value={role}>
+                          {role}
+                        </option>
+                      ))}
+                    </select>
+                  </td>
+                  <td>
+                    <select
+                      className={`${styles.roleSelect} ${styles.statusSelect} ${getStatusClass(user.status)}`}
+                      value={user.status}
+                      onChange={(event) =>
+                        handleStatusChange(user.id, user.status, event.target.value)
+                      }
+                    >
+                      {statuses.map((status) => (
+                        <option key={status} value={status}>
+                          {status}
+                        </option>
+                      ))}
+                    </select>
                   </td>
                   <td>{user.createdDate}</td>
                 </tr>

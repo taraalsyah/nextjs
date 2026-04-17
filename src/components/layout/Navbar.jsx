@@ -9,7 +9,6 @@ export default function Navbar() {
       </Link>
 
       <div className={styles.menu}>
-        <Link href="/">Home</Link>
         <a href="#" className={styles.loginBtn}>
           Logout
         </a>

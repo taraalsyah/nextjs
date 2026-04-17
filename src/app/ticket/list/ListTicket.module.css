@@ -25,7 +25,19 @@
   margin: 0;
 }
 
+.successNotice {
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #86efac;
+  border-radius: 0.75rem;
+  background: #f0fdf4;
+  color: #166534;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
 .tableCard {
+  margin: 0.5rem 0;
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -362,6 +374,30 @@
 .attachmentLink:hover {
   background: #e0f2fe;
   color: #0284c7;
+}
+
+.attachmentPreviewWrap {
+  width: 100%;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  background: #f8fafc;
+  padding: 0.5rem;
+}
+
+.attachmentPreview {
+  width: 100%;
+  max-height: 260px;
+  object-fit: contain;
+  border-radius: 0.375rem;
+  display: block;
+  background: #ffffff;
+}
+
+.attachmentName {
+  margin: 0.5rem 0 0;
+  color: #64748b;
+  font-size: 0.8rem;
+  word-break: break-word;
 }
 
 .modalFooter {

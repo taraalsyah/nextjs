@@ -17,3 +17,29 @@ model Post {
   title   String
   content String
 }
+
+enum TicketStatus {
+  OPEN
+  IN_PROGRESS
+  CLOSED
+}
+
+enum TicketPriority {
+  HIGH
+  MEDIUM
+  LOW
+}
+
+model Ticket {
+  id          String         @id @default(uuid())
+  ticketCode  String         @unique
+  title       String
+  requestor   String
+  status      TicketStatus   @default(OPEN)
+  priority    TicketPriority
+  category    String
+  assignTo    String         @default("Unassigned")
+  createdAt   DateTime       @default(now())
+  description String
+  attachment  String?
+}

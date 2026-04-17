@@ -20,7 +20,7 @@ export default function ConditionalLayout({ children }) {
       <div style={{ display: "flex" }}>
         <Sidebar />
 
-        <main style={{ flex: 1, padding: "20px" }}>
+        <main style={{ flex: 1, minWidth: 0, padding: "20px" }}>
           {children}
         </main>
       </div>
