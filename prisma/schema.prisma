@@ -43,3 +43,10 @@ model Ticket {
   description String
   attachment  String?
 }
+
+
+model user {
+  id    Int    @id @default(autoincrement())
+  name  String
+  email String @unique
+}
