@@ -1,5 +1,4 @@
-
-import getUsers from './actions'
+'use client'
 
 type User = {
   id: string;
@@ -9,8 +8,7 @@ type User = {
 
 
 
-export default async function UserList() {
-      const users: User[] = await getUsers()
+export default function UserList({ users }: { users: User[] }) {
 
   return (
     <div>

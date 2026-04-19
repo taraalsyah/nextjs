@@ -1,11 +1,12 @@
 //import { prisma } from "@/lib/prisma";
 import UserForm from './FormCreateBelajar'
 import UserList from './ListUsers'
-
+import List from './List'
+import getUsers from './actions'
 
 
 export default async function UsersPage() {
-  
+  const users = await getUsers();
 
   return (
     <main className="p-8">
@@ -13,8 +14,11 @@ export default async function UsersPage() {
 
       {/* Client Component form disisipkan di dalam Server Component */}
       <UserForm />
-      
-      <UserList />
+
+      <UserList users={users} />
+
+      <p>Total</p>
+      <List users={users} />
 
     </main>
   )
