@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Tara Alsyah | Senior Frontend Developer Portfolio',
+  title: 'Tara Alsyah | Portfolio',
   description:
-    'Portfolio resmi Senior Frontend Developer spesialis Next.js App Router, React, TypeScript, dan Tailwind CSS.',
+    'Portfolio resmi Tara Alsyah spesialis Next.js App Router, React, TypeScript, dan Tailwind CSS.',
   keywords: [
     'Frontend Developer',
     'Next.js',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Tara Alsyah' }],
   openGraph: {
-    title: 'Tara Alsyah | Senior Frontend Developer Portfolio',
+    title: 'Tara Alsyah | Portfolio',
     description:
       'Single-Page Portfolio Landing Page modern yang responsif, cepat, dan bersih.',
     type: 'website',

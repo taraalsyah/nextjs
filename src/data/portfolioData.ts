@@ -33,7 +33,7 @@ export interface PersonalInfo {
 
 export const personalInfo: PersonalInfo = {
   name: "Tara Alsyah",
-  role: "Senior Frontend Developer",
+  role: "",
   tagline: "Membangun Pengalaman Web yang Modern, Responsif, dan Berkinerja Tinggi",
   bio: "Spesialis dalam ekosistem React, Next.js, dan Web UI modern. Berfokus pada arsitektur komponen yang bersih, performa tinggi, aksesibilitas, dan antarmuka pengguna yang terstruktur.",
   location: "Jakarta, Indonesia",

@@ -29,9 +29,11 @@ export default function HeroSection() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-zinc-100 leading-tight">
               {personalInfo.name}
             </h1>
-            <p className="text-lg sm:text-xl font-medium text-zinc-400">
-              {personalInfo.role}
-            </p>
+            {personalInfo.role && (
+              <p className="text-lg sm:text-xl font-medium text-zinc-400">
+                {personalInfo.role}
+              </p>
+            )}
           </div>
 
           {/* Intro Description */}
