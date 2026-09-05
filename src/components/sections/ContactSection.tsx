@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Check } from 'lucide-react';
+import { Mail, MapPin, Check, AlertCircle } from 'lucide-react';
 import { personalInfo } from '@/data/portfolioData';
 import { GithubIcon, LinkedinIcon } from '@/components/ui/Icons';
 
@@ -15,25 +15,39 @@ export default function ContactSection() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [responseMessage, setResponseMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setErrorMessage('');
+    setResponseMessage('');
 
-    console.log('--- Form Submission Received ---');
-    console.log('Nama:', formData.name);
-    console.log('Email:', formData.email);
-    console.log('Pesan:', formData.message);
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    setTimeout(() => {
+      const data = await res.json();
+
+      if (res.ok && data.success) {
+        setSubmitted(true);
+        setResponseMessage(data.message || 'Pesan Anda berhasil dikirim ke taraalsyah45@gmail.com');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setErrorMessage(data.error || 'Gagal mengirim pesan. Silakan coba lagi.');
+      }
+    } catch (err) {
+      console.error('Submit error:', err);
+      setErrorMessage('Terjadi kesalahan koneksi. Silakan coba lagi.');
+    } finally {
       setIsSubmitting(false);
-      setSubmitted(true);
-      setFormData({ name: '', email: '', message: '' });
-
-      setTimeout(() => {
-        setSubmitted(false);
-      }, 5000);
-    }, 400);
+    }
   };
 
   return (
@@ -132,12 +146,25 @@ export default function ContactSection() {
                   <Check className="w-5 h-5" />
                 </div>
                 <h3 className="text-base font-semibold text-zinc-100">Pesan Berhasil Terkirim</h3>
-                <p className="text-zinc-400 text-xs max-w-sm mx-auto">
-                  Terima kasih. Pesan Anda telah dicatat ke dalam console browser (`console.log`).
+                <p className="text-zinc-400 text-xs max-w-sm mx-auto leading-relaxed">
+                  {responseMessage}
                 </p>
+                <button
+                  onClick={() => setSubmitted(false)}
+                  className="mt-4 px-4 py-2 rounded-lg bg-zinc-800 text-zinc-200 text-xs font-medium hover:bg-zinc-700 transition-colors"
+                >
+                  Kirim Pesan Lain
+                </button>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
+                {errorMessage && (
+                  <div className="p-3 rounded-lg bg-rose-950/50 border border-rose-800 text-rose-300 text-xs flex items-center gap-2">
+                    <AlertCircle className="w-4 h-4 shrink-0" />
+                    <span>{errorMessage}</span>
+                  </div>
+                )}
+
                 <div className="space-y-1.5">
                   <label htmlFor="name" className="block text-xs font-medium text-zinc-300">
                     Nama Lengkap
@@ -188,7 +215,7 @@ export default function ContactSection() {
                   disabled={isSubmitting}
                   className="w-full px-4 py-2.5 rounded-lg bg-zinc-100 text-zinc-950 font-medium text-sm hover:bg-zinc-200 transition-colors disabled:opacity-50"
                 >
-                  {isSubmitting ? 'Mengirim...' : 'Kirim Pesan'}
+                  {isSubmitting ? 'Mengirim Pesan...' : 'Kirim Pesan'}
                 </button>
               </form>
             )}
