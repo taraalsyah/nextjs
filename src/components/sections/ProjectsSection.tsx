@@ -1,8 +1,9 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, BookOpen } from 'lucide-react';
 import { projects, Project } from '@/data/portfolioData';
 import { GithubIcon } from '@/components/ui/Icons';
 
@@ -75,7 +76,17 @@ export default function ProjectsSection() {
                     ))}
                   </div>
 
-                  <div className="flex items-center gap-4 pt-3 border-t border-zinc-800/60">
+                  <div className="flex flex-wrap items-center gap-3 sm:gap-4 pt-3 border-t border-zinc-800/60">
+                    {project.docUrl && (
+                      <Link
+                        href={project.docUrl}
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-zinc-100 text-zinc-950 font-semibold text-xs hover:bg-zinc-200 transition-colors"
+                      >
+                        <BookOpen className="w-3.5 h-3.5" />
+                        <span>Detail Dok</span>
+                      </Link>
+                    )}
+
                     <a
                       href={project.liveUrl}
                       target="_blank"

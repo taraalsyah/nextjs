@@ -7,6 +7,7 @@ export interface Project {
   tags: string[];
   githubUrl: string;
   liveUrl: string;
+  docUrl?: string;
   featured: boolean;
 }
 
@@ -77,6 +78,7 @@ export const projects: Project[] = [
     tags: ["Next.js", "TypeScript", "Tailwind CSS", "RBAC", "Workflow Approval"],
     githubUrl: "https://github.com/taraalsyah/nextjs_portofolio",
     liveUrl: "https://www.tasktuntas.com/",
+    docUrl: "/projects/tasktuntas",
     featured: true,
   },
 
