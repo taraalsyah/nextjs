@@ -422,14 +422,15 @@ function FeaturesPageContent() {
       </div>
 
       <div className="my-6 space-y-2">
-        <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-xl group">
+        <div className="w-full rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl p-1">
           <Image
             src="/images/kanban_board.png"
             alt="TaskTuntas Interactive Kanban Board Screenshot"
-            fill
-            sizes="(max-width: 1200px) 100vw, 1200px"
-            className="object-cover object-top hover:scale-[1.01] transition-transform duration-300"
+            width={1024}
+            height={550}
+            className="w-full h-auto rounded-xl object-contain"
             priority
+            unoptimized
           />
         </div>
         <p className="text-center text-xs text-zinc-400 font-mono">
