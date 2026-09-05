@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight, Download, MapPin, Mail } from 'lucide-react';
+import { ArrowRight, Eye, MapPin, Mail } from 'lucide-react';
 import { personalInfo, stats } from '@/data/portfolioData';
 import { GithubIcon, LinkedinIcon } from '@/components/ui/Icons';
 
@@ -58,16 +58,13 @@ export default function HeroSection() {
             </a>
 
             <a
-              href="/resume.pdf"
-              download
-              onClick={(e) => {
-                e.preventDefault();
-                alert('Mengunduh CV Demo');
-              }}
+              href={personalInfo.resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-300 font-medium text-sm hover:bg-zinc-800 hover:border-zinc-700 transition-colors"
             >
-              <Download className="w-4 h-4 text-zinc-400" />
-              <span>Unduh CV</span>
+              <Eye className="w-4 h-4 text-zinc-400" />
+              <span>Lihat CV</span>
             </a>
           </div>
 

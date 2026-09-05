@@ -38,7 +38,7 @@ export const personalInfo: PersonalInfo = {
   bio: "Spesialis dalam ekosistem React, Next.js, dan Web UI modern. Berfokus pada arsitektur komponen yang bersih, performa tinggi, aksesibilitas, dan antarmuka pengguna yang terstruktur.",
   location: "Jakarta, Indonesia",
   status: "Terbuka untuk Peluang Freelance & Full-time",
-  resumeUrl: "#",
+  resumeUrl: "/cv-tara-alsyah.pdf",
   socials: {
     github: "https://github.com/taraalsyah",
     linkedin: "https://www.linkedin.com/in/taraalsyah/",

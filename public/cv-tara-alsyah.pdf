@@ -1,0 +1,302 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 4 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 5110 >>
+stream
+/F2 22 Tf
+0.000 0.000 0.000 rg
+BT
+45.00 796.89 Td
+(TARA ALSYAH) Tj
+ET
+/F1 12 Tf
+0.200 0.200 0.200 rg
+BT
+45.00 774.89 Td
+(App Support & Web Dev) Tj
+ET
+/F1 10 Tf
+BT
+340.28 792.89 Td
+(083895618083 | taraalsyah45@gmail.com) Tj
+ET
+0.000 0.000 0.000 RG
+0.8 w
+45.00 759.89 m 550.28 759.89 l S
+/F2 11 Tf
+0.000 0.000 0.000 rg
+BT
+45.00 741.89 Td
+(SUMMARY) Tj
+ET
+/F1 9.5 Tf
+0.150 0.150 0.150 rg
+BT
+45.00 727.89 Td
+(Profesional di bidang IT Support dan Application Support dengan kemampuan dalam pemeliharaan,) Tj
+ET
+BT
+45.00 714.89 Td
+(pemantauan, serta troubleshooting aplikasi perusahaan. Berpengalaman menangani isu teknis pengguna,) Tj
+ET
+BT
+45.00 701.89 Td
+(analisis error log, konfigurasi sistem, dan koordinasi dengan tim developer untuk penyelesaian masalah) Tj
+ET
+BT
+45.00 688.89 Td
+(aplikasi. Memiliki pemahaman tentang database dan jaringan.) Tj
+ET
+/F2 11 Tf
+0.000 0.000 0.000 rg
+BT
+45.00 667.89 Td
+(WORK EXPERIENCE) Tj
+ET
+0.000 0.000 0.000 RG
+0.5 w
+45.00 663.89 m 550.28 663.89 l S
+/F2 10 Tf
+0.000 0.000 0.000 rg
+BT
+45.00 649.89 Td
+(IT Support , Icode Technologies) Tj
+ET
+/F1 10 Tf
+BT
+480.28 649.89 Td
+(2023 - Present) Tj
+ET
+/F1 9 Tf
+0.150 0.150 0.150 rg
+BT
+55.00 636.89 Td
+(? Menangani laporan error aplikasi dari pengguna, melakukan analisis awal \(root cause analysis\), serta) Tj
+ET
+BT
+63.00 624.89 Td
+(koordinasi dengan tim developer untuk perbaikan lanjutan.) Tj
+ET
+BT
+55.00 612.89 Td
+(? Melakukan deployment, update, dan konfigurasi aplikasi sesuai standar operasional.) Tj
+ET
+BT
+55.00 600.89 Td
+(? Membantu proses UAT \(User Acceptance Test\) sebelum aplikasi dirilis ke lingkungan produksi.) Tj
+ET
+/F2 10 Tf
+0.000 0.000 0.000 rg
+BT
+45.00 582.89 Td
+(Helpdesk, Icode Technologies) Tj
+ET
+/F1 10 Tf
+BT
+485.28 582.89 Td
+(2018 - 2022) Tj
+ET
+/F1 9 Tf
+0.150 0.150 0.150 rg
+BT
+55.00 569.89 Td
+(? Dokumentasi teknis insiden dan resolusi masalah sebagai knowledge base.) Tj
+ET
+BT
+55.00 557.89 Td
+(? Mengoperasikan tools monitoring utilitas menggunakan PRTG dan Log.) Tj
+ET
+/F2 11 Tf
+0.000 0.000 0.000 rg
+BT
+45.00 537.89 Td
+(TECHNICAL SKILLS) Tj
+ET
+0.000 0.000 0.000 RG
+0.5 w
+45.00 533.89 m 550.28 533.89 l S
+/F1 9 Tf
+0.150 0.150 0.150 rg
+BT
+55.00 519.89 Td
+(? Web Dev : Django, Next JS.) Tj
+ET
+BT
+55.00 506.89 Td
+(? Data Processing : Pandas , Numpy , Advance Excel.) Tj
+ET
+BT
+55.00 493.89 Td
+(? OS : Advance linux , Mac, Advance windows.) Tj
+ET
+BT
+55.00 480.89 Td
+(? Software : Wireshark , Cisco, Figma, OBS, Git, Microsoft Office, Mysql, Redis.) Tj
+ET
+/F2 11 Tf
+0.000 0.000 0.000 rg
+BT
+45.00 459.89 Td
+(PROJECT) Tj
+ET
+0.000 0.000 0.000 RG
+0.5 w
+45.00 455.89 m 550.28 455.89 l S
+/F1 9 Tf
+/F2 9.5 Tf
+0.000 0.000 0.000 rg
+BT
+45.00 441.89 Td
+(1. System Web Ticketing) Tj
+ET
+/F1 9.5 Tf
+BT
+485.28 441.89 Td
+(2024 - 2025) Tj
+ET
+/F1 9 Tf
+0.150 0.150 0.150 rg
+BT
+55.00 429.89 Td
+(? Membangun aplikasi web ticketing secara full-stack, mulai dari perancangan antarmuka pengguna frontend) Tj
+ET
+BT
+63.00 417.89 Td
+(UI, logika backend,skema database \(Django ORM & MYSQL\) dan Integrasi API dengan third party.) Tj
+ET
+BT
+55.00 405.89 Td
+(? Deployment serta konfigurasi infrastruktur aplikasi pada server linux untuk siap production.) Tj
+ET
+/F2 9.5 Tf
+0.000 0.000 0.000 rg
+BT
+45.00 389.89 Td
+(2. Email and Telegram Notification \(Internal daily tools\)) Tj
+ET
+/F1 9 Tf
+0.150 0.150 0.150 rg
+BT
+55.00 377.89 Td
+(? Membangun system monitoring utilitas infrastruktur meliputi CPU , Memori , Penyimpanan dan I/O) Tj
+ET
+BT
+63.00 365.89 Td
+(Throughput.) Tj
+ET
+BT
+55.00 353.89 Td
+(? Konfigurasi system notifikasi pada server linux untuk mengirimkan alert menggunakan Telegram Bot dan) Tj
+ET
+BT
+63.00 341.89 Td
+(Email.) Tj
+ET
+/F2 9.5 Tf
+0.000 0.000 0.000 rg
+BT
+45.00 325.89 Td
+(3. Project SMSC SMS Gateway \(Assign to XL Axiata\)) Tj
+ET
+/F1 9.5 Tf
+BT
+485.28 325.89 Td
+(2024 - 2025) Tj
+ET
+/F1 9 Tf
+0.150 0.150 0.150 rg
+BT
+55.00 313.89 Td
+(? Memastikan stabilitas layanan SMSC dengan memantau metrik kritikal sistem \(traffic, throughput, queue,) Tj
+ET
+BT
+63.00 301.89 Td
+(server utilization\)) Tj
+ET
+BT
+55.00 289.89 Td
+(? Mendiagnosis isu pengiriman SMS menggunakan analisis protokol SMPP dan routing path serta konfigurasi) Tj
+ET
+BT
+63.00 277.89 Td
+(routing serta integrasi gateway untuk optimalisasi rute pesan.) Tj
+ET
+/F2 9.5 Tf
+0.000 0.000 0.000 rg
+BT
+45.00 261.89 Td
+(4. Project USSI \(Assign to Telkomsel\)) Tj
+ET
+/F1 9.5 Tf
+BT
+485.28 261.89 Td
+(2026) Tj
+ET
+/F1 9 Tf
+0.150 0.150 0.150 rg
+BT
+55.00 249.89 Td
+(? Pengujian fungsional, validasi, dan integrasi secara end-to-end pada berbagai tipe perangkat lunak dan) Tj
+ET
+BT
+63.00 237.89 Td
+(keras \(device holding seperti Xiaomi, Samsung\)) Tj
+ET
+BT
+55.00 225.89 Td
+(? load dan stress testing aplikasi USSI menggunakan ApacheBench, serta melakukan analisis trafik signaling) Tj
+ET
+BT
+63.00 213.89 Td
+(SIP Protocol untuk mendeteksi anomali layanan dan mempercepat eskalasi troubleshooting.) Tj
+ET
+/F2 11 Tf
+0.000 0.000 0.000 rg
+BT
+45.00 193.89 Td
+(EDUCATION) Tj
+ET
+0.000 0.000 0.000 RG
+0.5 w
+45.00 189.89 m 550.28 189.89 l S
+/F1 9.5 Tf
+0.000 0.000 0.000 rg
+BT
+45.00 175.89 Td
+(Tekhnologi Informasi Universitas Bina Sarana Informatika) Tj
+ET
+BT
+485.28 175.89 Td
+(2021 - 2025) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000121 00000 n 
+0000000263 00000 n 
+0000005425 00000 n 
+0000005522 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+5624
+%%EOF
