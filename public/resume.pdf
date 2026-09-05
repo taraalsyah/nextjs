@@ -10,7 +10,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 4 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> >>
 endobj
 4 0 obj
-<< /Length 5110 >>
+<< /Length 6008 >>
 stream
 /F2 22 Tf
 0.000 0.000 0.000 rg
@@ -77,22 +77,30 @@ BT
 (2023 - Present) Tj
 ET
 /F1 9 Tf
+0.200 0.200 0.200 rg
+55.00 639.39 3 3 re f
 0.150 0.150 0.150 rg
 BT
-55.00 636.89 Td
-(? Menangani laporan error aplikasi dari pengguna, melakukan analisis awal \(root cause analysis\), serta) Tj
+63.00 636.89 Td
+(Menangani laporan error aplikasi dari pengguna, melakukan analisis awal \(root cause analysis\), serta) Tj
 ET
 BT
 63.00 624.89 Td
 (koordinasi dengan tim developer untuk perbaikan lanjutan.) Tj
 ET
+0.200 0.200 0.200 rg
+55.00 615.39 3 3 re f
+0.150 0.150 0.150 rg
 BT
-55.00 612.89 Td
-(? Melakukan deployment, update, dan konfigurasi aplikasi sesuai standar operasional.) Tj
+63.00 612.89 Td
+(Melakukan deployment, update, dan konfigurasi aplikasi sesuai standar operasional.) Tj
 ET
+0.200 0.200 0.200 rg
+55.00 603.39 3 3 re f
+0.150 0.150 0.150 rg
 BT
-55.00 600.89 Td
-(? Membantu proses UAT \(User Acceptance Test\) sebelum aplikasi dirilis ke lingkungan produksi.) Tj
+63.00 600.89 Td
+(Membantu proses UAT \(User Acceptance Test\) sebelum aplikasi dirilis ke lingkungan produksi.) Tj
 ET
 /F2 10 Tf
 0.000 0.000 0.000 rg
@@ -106,14 +114,19 @@ BT
 (2018 - 2022) Tj
 ET
 /F1 9 Tf
+0.200 0.200 0.200 rg
+55.00 572.39 3 3 re f
 0.150 0.150 0.150 rg
 BT
-55.00 569.89 Td
-(? Dokumentasi teknis insiden dan resolusi masalah sebagai knowledge base.) Tj
+63.00 569.89 Td
+(Dokumentasi teknis insiden dan resolusi masalah sebagai knowledge base.) Tj
 ET
+0.200 0.200 0.200 rg
+55.00 560.39 3 3 re f
+0.150 0.150 0.150 rg
 BT
-55.00 557.89 Td
-(? Mengoperasikan tools monitoring utilitas menggunakan PRTG dan Log.) Tj
+63.00 557.89 Td
+(Mengoperasikan tools monitoring utilitas menggunakan PRTG dan Log.) Tj
 ET
 /F2 11 Tf
 0.000 0.000 0.000 rg
@@ -125,22 +138,33 @@ ET
 0.5 w
 45.00 533.89 m 550.28 533.89 l S
 /F1 9 Tf
+0.200 0.200 0.200 rg
+55.00 522.39 3 3 re f
 0.150 0.150 0.150 rg
 BT
-55.00 519.89 Td
-(? Web Dev : Django, Next JS.) Tj
+63.00 519.89 Td
+(Web Dev : Django, Next JS.) Tj
 ET
+0.200 0.200 0.200 rg
+55.00 509.39 3 3 re f
+0.150 0.150 0.150 rg
 BT
-55.00 506.89 Td
-(? Data Processing : Pandas , Numpy , Advance Excel.) Tj
+63.00 506.89 Td
+(Data Processing : Pandas , Numpy , Advance Excel.) Tj
 ET
+0.200 0.200 0.200 rg
+55.00 496.39 3 3 re f
+0.150 0.150 0.150 rg
 BT
-55.00 493.89 Td
-(? OS : Advance linux , Mac, Advance windows.) Tj
+63.00 493.89 Td
+(OS : Advance linux , Mac, Advance windows.) Tj
 ET
+0.200 0.200 0.200 rg
+55.00 483.39 3 3 re f
+0.150 0.150 0.150 rg
 BT
-55.00 480.89 Td
-(? Software : Wireshark , Cisco, Figma, OBS, Git, Microsoft Office, Mysql, Redis.) Tj
+63.00 480.89 Td
+(Software : Wireshark , Cisco, Figma, OBS, Git, Microsoft Office, Mysql, Redis.) Tj
 ET
 /F2 11 Tf
 0.000 0.000 0.000 rg
@@ -151,7 +175,6 @@ ET
 0.000 0.000 0.000 RG
 0.5 w
 45.00 455.89 m 550.28 455.89 l S
-/F1 9 Tf
 /F2 9.5 Tf
 0.000 0.000 0.000 rg
 BT
@@ -164,18 +187,23 @@ BT
 (2024 - 2025) Tj
 ET
 /F1 9 Tf
+0.200 0.200 0.200 rg
+55.00 432.39 3 3 re f
 0.150 0.150 0.150 rg
 BT
-55.00 429.89 Td
-(? Membangun aplikasi web ticketing secara full-stack, mulai dari perancangan antarmuka pengguna frontend) Tj
+63.00 429.89 Td
+(Membangun aplikasi web ticketing secara full-stack, mulai dari perancangan antarmuka pengguna frontend) Tj
 ET
 BT
 63.00 417.89 Td
 (UI, logika backend,skema database \(Django ORM & MYSQL\) dan Integrasi API dengan third party.) Tj
 ET
+0.200 0.200 0.200 rg
+55.00 408.39 3 3 re f
+0.150 0.150 0.150 rg
 BT
-55.00 405.89 Td
-(? Deployment serta konfigurasi infrastruktur aplikasi pada server linux untuk siap production.) Tj
+63.00 405.89 Td
+(Deployment serta konfigurasi infrastruktur aplikasi pada server linux untuk siap production.) Tj
 ET
 /F2 9.5 Tf
 0.000 0.000 0.000 rg
@@ -184,18 +212,23 @@ BT
 (2. Email and Telegram Notification \(Internal daily tools\)) Tj
 ET
 /F1 9 Tf
+0.200 0.200 0.200 rg
+55.00 380.39 3 3 re f
 0.150 0.150 0.150 rg
 BT
-55.00 377.89 Td
-(? Membangun system monitoring utilitas infrastruktur meliputi CPU , Memori , Penyimpanan dan I/O) Tj
+63.00 377.89 Td
+(Membangun system monitoring utilitas infrastruktur meliputi CPU , Memori , Penyimpanan dan I/O) Tj
 ET
 BT
 63.00 365.89 Td
 (Throughput.) Tj
 ET
+0.200 0.200 0.200 rg
+55.00 356.39 3 3 re f
+0.150 0.150 0.150 rg
 BT
-55.00 353.89 Td
-(? Konfigurasi system notifikasi pada server linux untuk mengirimkan alert menggunakan Telegram Bot dan) Tj
+63.00 353.89 Td
+(Konfigurasi system notifikasi pada server linux untuk mengirimkan alert menggunakan Telegram Bot dan) Tj
 ET
 BT
 63.00 341.89 Td
@@ -213,18 +246,23 @@ BT
 (2024 - 2025) Tj
 ET
 /F1 9 Tf
+0.200 0.200 0.200 rg
+55.00 316.39 3 3 re f
 0.150 0.150 0.150 rg
 BT
-55.00 313.89 Td
-(? Memastikan stabilitas layanan SMSC dengan memantau metrik kritikal sistem \(traffic, throughput, queue,) Tj
+63.00 313.89 Td
+(Memastikan stabilitas layanan SMSC dengan memantau metrik kritikal sistem \(traffic, throughput, queue,) Tj
 ET
 BT
 63.00 301.89 Td
 (server utilization\)) Tj
 ET
+0.200 0.200 0.200 rg
+55.00 292.39 3 3 re f
+0.150 0.150 0.150 rg
 BT
-55.00 289.89 Td
-(? Mendiagnosis isu pengiriman SMS menggunakan analisis protokol SMPP dan routing path serta konfigurasi) Tj
+63.00 289.89 Td
+(Mendiagnosis isu pengiriman SMS menggunakan analisis protokol SMPP dan routing path serta konfigurasi) Tj
 ET
 BT
 63.00 277.89 Td
@@ -242,18 +280,23 @@ BT
 (2026) Tj
 ET
 /F1 9 Tf
+0.200 0.200 0.200 rg
+55.00 252.39 3 3 re f
 0.150 0.150 0.150 rg
 BT
-55.00 249.89 Td
-(? Pengujian fungsional, validasi, dan integrasi secara end-to-end pada berbagai tipe perangkat lunak dan) Tj
+63.00 249.89 Td
+(Pengujian fungsional, validasi, dan integrasi secara end-to-end pada berbagai tipe perangkat lunak dan) Tj
 ET
 BT
 63.00 237.89 Td
 (keras \(device holding seperti Xiaomi, Samsung\)) Tj
 ET
+0.200 0.200 0.200 rg
+55.00 228.39 3 3 re f
+0.150 0.150 0.150 rg
 BT
-55.00 225.89 Td
-(? load dan stress testing aplikasi USSI menggunakan ApacheBench, serta melakukan analisis trafik signaling) Tj
+63.00 225.89 Td
+(load dan stress testing aplikasi USSI menggunakan ApacheBench, serta melakukan analisis trafik signaling) Tj
 ET
 BT
 63.00 213.89 Td
@@ -293,10 +336,10 @@ xref
 0000000064 00000 n 
 0000000121 00000 n 
 0000000263 00000 n 
-0000005425 00000 n 
-0000005522 00000 n 
+0000006323 00000 n 
+0000006420 00000 n 
 trailer
 << /Size 7 /Root 1 0 R >>
 startxref
-5624
+6522
 %%EOF
