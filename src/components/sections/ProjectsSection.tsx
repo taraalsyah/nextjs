@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
 import { projects, Project } from '@/data/portfolioData';
@@ -41,11 +42,12 @@ export default function ProjectsSection() {
             >
               {/* Image Preview */}
               <div className="relative aspect-video w-full overflow-hidden bg-zinc-900 border-b border-zinc-800/60">
-                <img
+                <Image
                   src={project.image}
                   alt={project.title}
-                  loading="lazy"
-                  className="w-full h-full object-cover object-center group-hover:opacity-90 transition-opacity duration-300"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover object-center group-hover:opacity-90 transition-opacity duration-300"
                 />
                 {project.featured && (
                   <div className="absolute top-3 left-3 px-2.5 py-0.5 rounded-md bg-zinc-950/80 border border-zinc-800 text-zinc-400 text-[11px] font-mono">

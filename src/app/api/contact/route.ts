@@ -56,7 +56,7 @@ export async function POST(request: Request) {
       success: true,
       message: `Pesan berhasil dikirim ke ${targetEmail}!`,
     });
-  } catch (error: any) {
+  } catch (error) {
     console.error('Zoho SMTP Error:', error);
     return NextResponse.json(
       { error: 'Gagal mengirim email via SMTP Zoho. Silakan periksa koneksi atau kredensial.' },
