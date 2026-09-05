@@ -13,86 +13,53 @@ export async function POST(request: Request) {
       );
     }
 
-    const targetEmail = 'taraalsyah45@gmail.com';
+    const smtpHost = process.env.SMTP_SERVER || 'smtp.zoho.com';
+    const smtpPort = parseInt(process.env.SMTP_PORT || '587', 10);
+    const smtpUser = process.env.SMTP_USERNAME || 'support@tasktuntas.com';
+    const smtpPass = process.env.SMTP_PASSWORD || 'A7CcHk2dSPMS';
+    const targetEmail = process.env.CONTACT_TARGET_EMAIL || 'taraalsyah45@gmail.com';
 
-    // 1. Check for Gmail / SMTP environment credentials
-    const smtpUser = process.env.GMAIL_USER || process.env.SMTP_USER;
-    const smtpPass = process.env.GMAIL_APP_PASSWORD || process.env.SMTP_PASS;
+    // Create Nodemailer transport for Zoho SMTP
+    const transporter = nodemailer.createTransport({
+      host: smtpHost,
+      port: smtpPort,
+      secure: smtpPort === 465, // false for 587 (STARTTLS)
+      auth: {
+        user: smtpUser,
+        pass: smtpPass,
+      },
+    });
 
-    if (smtpUser && smtpPass) {
-      const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-          user: smtpUser,
-          pass: smtpPass,
-        },
-      });
-
-      const mailOptions = {
-        from: `"${name}" <${smtpUser}>`,
-        replyTo: email,
-        to: targetEmail,
-        subject: `[Portofolio] Pesan Baru dari ${name}`,
-        html: `
-          <div style="font-family: Arial, sans-serif; padding: 20px; color: #333; max-width: 600px; border: 1px solid #eee; border-radius: 8px;">
-            <h2 style="color: #09090b; border-bottom: 2px solid #27272a; padding-bottom: 10px;">Pesan Baru dari Portofolio</h2>
-            <p><strong>Nama:</strong> ${name}</p>
-            <p><strong>Email Pengirim:</strong> <a href="mailto:${email}">${email}</a></p>
-            <p><strong>Pesan:</strong></p>
-            <div style="background-color: #f4f4f5; padding: 15px; border-radius: 6px; white-space: pre-wrap;">${message}</div>
-            <hr style="margin-top: 20px; border: none; border-top: 1px solid #eee;" />
-            <p style="font-size: 12px; color: #71717a;">Email ini dikirim otomatis dari formulir kontak portofolio Tara Alsyah.</p>
+    const mailOptions = {
+      from: `"Portofolio - ${name}" <${smtpUser}>`,
+      replyTo: email,
+      to: targetEmail,
+      subject: `[Pesan Portofolio Baru] dari ${name}`,
+      html: `
+        <div style="font-family: Arial, sans-serif; padding: 24px; color: #18181b; max-width: 600px; border: 1px solid #e4e4e7; border-radius: 12px; background-color: #ffffff;">
+          <h2 style="color: #09090b; margin-top: 0; border-bottom: 2px solid #18181b; padding-bottom: 12px;">Pesan Kontak Portofolio Baru</h2>
+          <p style="margin: 8px 0;"><strong>Nama Pengirim:</strong> ${name}</p>
+          <p style="margin: 8px 0;"><strong>Email Pengirim:</strong> <a href="mailto:${email}" style="color: #2563eb;">${email}</a></p>
+          <div style="margin-top: 16px;">
+            <strong>Isi Pesan:</strong>
+            <div style="background-color: #f4f4f5; padding: 16px; border-radius: 8px; margin-top: 8px; white-space: pre-wrap; font-size: 14px; color: #27272a; border: 1px solid #e4e4e7;">${message}</div>
           </div>
-        `,
-      };
+          <hr style="margin-top: 24px; border: none; border-top: 1px solid #e4e4e7;" />
+          <p style="font-size: 12px; color: #71717a; margin-bottom: 0;">Dikirim otomatis via Zoho SMTP (support@tasktuntas.com) ke ${targetEmail}.</p>
+        </div>
+      `,
+    };
 
-      await transporter.sendMail(mailOptions);
-
-      return NextResponse.json({
-        success: true,
-        message: `Pesan berhasil dikirim ke ${targetEmail}!`,
-      });
-    }
-
-    // 2. Check for Web3Forms API Key
-    const web3Key = process.env.WEB3FORMS_ACCESS_KEY;
-    if (web3Key) {
-      const response = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
-        },
-        body: JSON.stringify({
-          access_key: web3Key,
-          name: name,
-          email: email,
-          message: message,
-          subject: `[Portofolio] Pesan Baru dari ${name}`,
-          to: targetEmail,
-        }),
-      });
-
-      const data = await response.json();
-      if (data.success) {
-        return NextResponse.json({
-          success: true,
-          message: `Pesan berhasil dikirim ke ${targetEmail}!`,
-        });
-      }
-    }
-
-    // 3. Fallback: Log payload & instruct env setup
-    console.log(`[Formulir Kontak] Pesan untuk ${targetEmail}:`, { name, email, message });
+    await transporter.sendMail(mailOptions);
 
     return NextResponse.json({
       success: true,
-      message: `Pesan berhasil diterima untuk ${targetEmail}! (Konfigurasikan GMAIL_USER & GMAIL_APP_PASSWORD di .env untuk pengiriman email langsung)`,
+      message: `Pesan berhasil dikirim ke ${targetEmail}!`,
     });
   } catch (error: any) {
-    console.error('Contact API Error:', error);
+    console.error('Zoho SMTP Error:', error);
     return NextResponse.json(
-      { error: 'Terjadi kesalahan saat mengirim pesan. Silakan coba lagi.' },
+      { error: 'Gagal mengirim email via SMTP Zoho. Silakan periksa koneksi atau kredensial.' },
       { status: 500 }
     );
   }
