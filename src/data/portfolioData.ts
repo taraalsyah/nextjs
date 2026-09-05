@@ -75,7 +75,7 @@ export const projects: Project[] = [
     description: "Aplikasi manajemen proyek dan task modern yang dilengkapi dengan fitur RBAC, workflow approval (Request to Done & Request to Close), analisis produktivitas, dan AI Assistant.",
     image: "https://www.tasktuntas.com/task_management.png",
     tags: ["Next.js", "TypeScript", "Tailwind CSS", "RBAC", "Workflow Approval"],
-    githubUrl: "https://github.com/taraalsyah",
+    githubUrl: "https://github.com/taraalsyah/nextjs_portofolio",
     liveUrl: "https://www.tasktuntas.com/",
     featured: true,
   },
