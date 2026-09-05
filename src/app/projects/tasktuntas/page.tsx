@@ -2,6 +2,7 @@
 
 import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   ArrowLeft,
@@ -420,7 +421,21 @@ function FeaturesPageContent() {
         </p>
       </div>
 
-      <ImagePlaceholder caption="Tampilan Papan Kanban Interaktif dengan Kolom Workflow (To-Do, In Progress, In Review, Done)" />
+      <div className="my-6 space-y-2">
+        <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-xl group">
+          <Image
+            src="/images/kanban_board.png"
+            alt="TaskTuntas Interactive Kanban Board Screenshot"
+            fill
+            sizes="(max-width: 1200px) 100vw, 1200px"
+            className="object-cover object-top hover:scale-[1.01] transition-transform duration-300"
+            priority
+          />
+        </div>
+        <p className="text-center text-xs text-zinc-400 font-mono">
+          Tampilan Antarmuka Asli Interactive Kanban Board TaskTuntas (Backlog, Open, In Progress, Done)
+        </p>
+      </div>
 
       <section className="space-y-6">
         {/* 1. Interactive Kanban */}
