@@ -560,7 +560,22 @@ function UserFlowPageContent() {
       {/* Langkah 1 */}
       <section className="space-y-4">
         <h2 className="text-xl font-semibold text-zinc-100">Langkah 1: Membuat Proyek Baru</h2>
-        <ImagePlaceholder caption="Form Pembuatan Proyek Baru - Nama Workspace & Metode Alur Kerja" />
+      <div className="my-6 space-y-2">
+        <div className="w-full rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl p-1">
+          <Image
+            src="/images/create_project_modal.png"
+            alt="TaskTuntas Form Pembuatan Proyek Baru Modal Screenshot"
+            width={1024}
+            height={550}
+            className="w-full h-auto rounded-xl object-contain"
+            priority
+            unoptimized
+          />
+        </div>
+        <p className="text-center text-xs text-zinc-400 font-mono">
+          Tampilan Antarmuka Asli Form Pembuatan Proyek Baru - Nama Workspace & Metode Alur Kerja
+        </p>
+      </div>
         <ol className="space-y-2 text-xs sm:text-sm text-zinc-300 list-decimal list-inside leading-relaxed">
           <li>Masuk ke halaman <strong>Dashboard</strong> utama aplikasi.</li>
           <li>Klik tombol <strong>+ Proyek Baru</strong> pada sudut kanan atas navigasi.</li>
