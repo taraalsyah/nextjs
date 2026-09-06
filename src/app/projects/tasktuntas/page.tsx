@@ -541,6 +541,113 @@ function FeaturesPageContent() {
   );
 }
 
+const joinProjectSlides = [
+  {
+    src: '/images/project_members.png',
+    alt: 'Pengaturan Proyek - Daftar Anggota & Generator Kode Invite',
+    title: '1. Generator Kode Invite & Pengaturan Anggota Proyek',
+    description: 'Tampilan antarmuka Pengaturan Proyek untuk menghasilkan Kode Invite aktif (Copy/Regenerate Code) dan mengelola daftar anggota.',
+  },
+  {
+    src: '/images/join_project.png',
+    alt: 'Form Join Project Menggunakan Invite Code Modal',
+    title: '2. Modal Form Join Project via Kode Invite',
+    description: 'Tampilan modal bagi kolaborator untuk memasukkan Kode Invite proyek dan mengajukan permohonan bergabung (Request Join).',
+  },
+];
+
+function JoinProjectCarousel() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev === 0 ? joinProjectSlides.length - 1 : prev - 1));
+  };
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev === joinProjectSlides.length - 1 ? 0 : prev + 1));
+  };
+
+  const current = joinProjectSlides[currentIndex];
+
+  return (
+    <div className="my-6 space-y-3">
+      <div className="relative w-full rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900/90 shadow-2xl p-2 group">
+        {/* Slide Counter Badge */}
+        <div className="absolute top-4 right-4 z-10 px-3 py-1 rounded-full bg-zinc-950/80 border border-zinc-700/80 text-zinc-300 text-xs font-mono backdrop-blur-md">
+          {currentIndex + 1} / {joinProjectSlides.length}
+        </div>
+
+        {/* Slide Image Container */}
+        <div className="relative w-full min-h-[300px] flex items-center justify-center bg-zinc-950/50 rounded-xl overflow-hidden p-2">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentIndex}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              transition={{ duration: 0.25 }}
+              className="w-full flex justify-center"
+            >
+              <Image
+                src={current.src}
+                alt={current.alt}
+                width={1024}
+                height={550}
+                className="w-full h-auto max-h-[500px] object-contain rounded-lg shadow-lg"
+                unoptimized
+              />
+            </motion.div>
+          </AnimatePresence>
+        </div>
+
+        {/* Left Control Arrow */}
+        <button
+          onClick={prevSlide}
+          aria-label="Previous Slide"
+          className="absolute left-4 top-1/2 -translate-y-1/2 p-2.5 rounded-full bg-zinc-950/80 border border-zinc-700/80 text-zinc-200 hover:text-white hover:bg-zinc-800 transition-all shadow-xl hover:scale-105 active:scale-95 z-20"
+        >
+          <ChevronLeft className="w-5 h-5" />
+        </button>
+
+        {/* Right Control Arrow */}
+        <button
+          onClick={nextSlide}
+          aria-label="Next Slide"
+          className="absolute right-4 top-1/2 -translate-y-1/2 p-2.5 rounded-full bg-zinc-950/80 border border-zinc-700/80 text-zinc-200 hover:text-white hover:bg-zinc-800 transition-all shadow-xl hover:scale-105 active:scale-95 z-20"
+        >
+          <ChevronRight className="w-5 h-5" />
+        </button>
+
+        {/* Indicators Dots */}
+        <div className="flex items-center justify-center gap-2 pt-3 pb-1">
+          {joinProjectSlides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              aria-label={`Go to slide ${index + 1}`}
+              className={`h-2 rounded-full transition-all duration-300 ${
+                currentIndex === index
+                  ? 'w-8 bg-emerald-400'
+                  : 'w-2 bg-zinc-700 hover:bg-zinc-500'
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Slide Caption */}
+      <div className="text-center space-y-1 bg-zinc-900/60 border border-zinc-800/60 rounded-xl p-3">
+        <p className="text-xs sm:text-sm font-semibold text-emerald-400">
+          {current.title}
+        </p>
+        <p className="text-xs text-zinc-400 font-mono">
+          {current.description}
+        </p>
+      </div>
+    </div>
+  );
+}
+
 {/* Page 3: Panduan Penggunaan */}
 function UserFlowPageContent() {
   return (
@@ -594,40 +701,7 @@ function UserFlowPageContent() {
       {/* Langkah 2 */}
       <section className="space-y-4 pt-6 border-t border-zinc-800/60">
         <h2 className="text-xl font-semibold text-zinc-100">Langkah 2: Kolaborasi Proyek via Kode Invite & Approval Join</h2>
-      <div className="my-6 space-y-4">
-        <div className="space-y-2">
-          <div className="w-full rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl p-1">
-            <Image
-              src="/images/project_members.png"
-              alt="Pengaturan Proyek - Daftar Anggota & Invite Code"
-              width={1024}
-              height={550}
-              className="w-full h-auto rounded-xl object-contain"
-              priority
-              unoptimized
-            />
-          </div>
-          <p className="text-center text-xs text-zinc-400 font-mono">
-            Tampilan Antarmuka Pengaturan Proyek - Generator Kode Invite Active & Kelola Daftar Anggota Proyek
-          </p>
-        </div>
-
-        <div className="space-y-2">
-          <div className="w-full rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl p-1">
-            <Image
-              src="/images/join_project.png"
-              alt="Join Project Menggunakan Invite Code Modal"
-              width={1024}
-              height={550}
-              className="w-full h-auto rounded-xl object-contain"
-              unoptimized
-            />
-          </div>
-          <p className="text-center text-xs text-zinc-400 font-mono">
-            Tampilan Antarmuka Form Join Project - Pengajuan Request Join Menggunakan Kode Invite Proyek
-          </p>
-        </div>
-      </div>
+        <JoinProjectCarousel />
         <ol className="space-y-2 text-xs sm:text-sm text-zinc-300 list-decimal list-inside leading-relaxed">
           <li>Owner proyek membuka menu <strong>Pengaturan Proyek</strong> (ikon roda gigi) lalu memilih tab <strong>Anggota</strong>.</li>
           <li>Owner membuat dan mengaktifkan <strong>Kode Invite Proyek</strong> (misal: <code className="px-1.5 py-0.5 rounded bg-zinc-800 text-zinc-300 font-mono text-xs">PM-2MLX-5S3X</code>) yang dapat disalin (<em>Copy Invite Code</em>) atau diperbarui kapan saja (<em>Regenerate Invite Code</em>).</li>
