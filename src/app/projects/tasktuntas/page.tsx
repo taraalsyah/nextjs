@@ -654,6 +654,125 @@ function UserFlowPageContent() {
   );
 }
 
+const notificationSlides = [
+  {
+    src: '/images/notification_overdue.png',
+    alt: 'Pemberitahuan Task Overdue - Template Email HTML',
+    title: '1. Email Alert: Pemberitahuan Task Overdue',
+    description: 'Template email otomatis yang dikirimkan kepada Assignee saat tugas melewati batas waktu (due date).',
+  },
+  {
+    src: '/images/notification_2fa.png',
+    alt: 'Kode Keamanan 2FA - Verifikasi Login',
+    title: '2. Email Security: Kode OTP 2FA (Two-Step Verification)',
+    description: 'Email pengiriman 6 digit kode OTP untuk autentikasi ganda login akun pengguna.',
+  },
+  {
+    src: '/images/notification_reset_password.png',
+    alt: 'Permintaan Reset Password Akun',
+    title: '3. Email Security: Permintaan Reset Password',
+    description: 'Email konfirmasi dengan link aman yang berlaku selama 10 menit untuk penyetelan ulang kata sandi.',
+  },
+  {
+    src: '/images/notification_web_push.jpg',
+    alt: 'Mobile / Web Push Notification TaskTuntas',
+    title: '4. Push Notification: Real-Time Mobile & Browser Alerts',
+    description: 'Notifikasi push instant pada perangkat seluler/browser ketika pengguna ditugaskan (assigned) pada task baru.',
+  },
+];
+
+function NotificationCarousel() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev === 0 ? notificationSlides.length - 1 : prev - 1));
+  };
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev === notificationSlides.length - 1 ? 0 : prev + 1));
+  };
+
+  const current = notificationSlides[currentIndex];
+
+  return (
+    <div className="my-6 space-y-3">
+      <div className="relative w-full rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900/90 shadow-2xl p-2 group">
+        {/* Slide Counter Badge */}
+        <div className="absolute top-4 right-4 z-10 px-3 py-1 rounded-full bg-zinc-950/80 border border-zinc-700/80 text-zinc-300 text-xs font-mono backdrop-blur-md">
+          {currentIndex + 1} / {notificationSlides.length}
+        </div>
+
+        {/* Slide Image Container */}
+        <div className="relative w-full min-h-[300px] flex items-center justify-center bg-zinc-950/50 rounded-xl overflow-hidden p-2">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentIndex}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              transition={{ duration: 0.25 }}
+              className="w-full flex justify-center"
+            >
+              <Image
+                src={current.src}
+                alt={current.alt}
+                width={1200}
+                height={700}
+                className="w-full h-auto max-h-[480px] object-contain rounded-lg shadow-lg"
+                unoptimized
+              />
+            </motion.div>
+          </AnimatePresence>
+        </div>
+
+        {/* Left Control Arrow */}
+        <button
+          onClick={prevSlide}
+          aria-label="Previous Slide"
+          className="absolute left-4 top-1/2 -translate-y-1/2 p-2.5 rounded-full bg-zinc-950/80 border border-zinc-700/80 text-zinc-200 hover:text-white hover:bg-zinc-800 transition-all shadow-xl hover:scale-105 active:scale-95 z-20"
+        >
+          <ChevronLeft className="w-5 h-5" />
+        </button>
+
+        {/* Right Control Arrow */}
+        <button
+          onClick={nextSlide}
+          aria-label="Next Slide"
+          className="absolute right-4 top-1/2 -translate-y-1/2 p-2.5 rounded-full bg-zinc-950/80 border border-zinc-700/80 text-zinc-200 hover:text-white hover:bg-zinc-800 transition-all shadow-xl hover:scale-105 active:scale-95 z-20"
+        >
+          <ChevronRight className="w-5 h-5" />
+        </button>
+
+        {/* Indicators Dots */}
+        <div className="flex items-center justify-center gap-2 pt-3 pb-1">
+          {notificationSlides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              aria-label={`Go to slide ${index + 1}`}
+              className={`h-2 rounded-full transition-all duration-300 ${
+                currentIndex === index
+                  ? 'w-8 bg-emerald-400'
+                  : 'w-2 bg-zinc-700 hover:bg-zinc-500'
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Slide Caption */}
+      <div className="text-center space-y-1 bg-zinc-900/60 border border-zinc-800/60 rounded-xl p-3">
+        <p className="text-xs sm:text-sm font-semibold text-emerald-400">
+          {current.title}
+        </p>
+        <p className="text-xs text-zinc-400 font-mono">
+          {current.description}
+        </p>
+      </div>
+    </div>
+  );
+}
+
 {/* Page 4: Fitur Lanjutan */}
 function AdvancedPageContent() {
   return (
@@ -776,7 +895,7 @@ function AdvancedPageContent() {
           <BellRing className="w-5 h-5 text-emerald-400" />
           <span>4. Otomatisasi Notifikasi & Webhook Integration</span>
         </h2>
-        <ImagePlaceholder caption="Log Pengaturan Notifikasi Webhook & Integrasi Bot Telegram/Slack" />
+        <NotificationCarousel />
         <ul className="space-y-2 text-xs sm:text-sm text-zinc-300 list-disc list-inside">
           <li><strong className="text-zinc-100">Multi-Channel Alerts:</strong> Pengiriman notifikasi proaktif saat terjadi peristiwa penting (tugas baru, penyebut akun, keterlambatan tenggat waktu) via In-App Bell, Email Blast (HTML), serta Integrasi Telegram Bot & Slack Channel.</li>
           <li><strong className="text-zinc-100">Event-Driven Webhook Engine:</strong> Pemicu otomasisasi berbasis <em>payload</em> JSON yang terhubung dengan repositori kode (GitHub/GitLab CI/CD) untuk mengubah status tugas secara otomatis saat terjadi <em>pull request</em> atau <em>commit</em>.</li>
