@@ -594,7 +594,40 @@ function UserFlowPageContent() {
       {/* Langkah 2 */}
       <section className="space-y-4 pt-6 border-t border-zinc-800/60">
         <h2 className="text-xl font-semibold text-zinc-100">Langkah 2: Mengundang Kolaborator & Pengaturan Peran</h2>
-        <ImagePlaceholder caption="Modal Undang Anggota - Input Email & Pilih Peran RBAC" />
+      <div className="my-6 space-y-4">
+        <div className="space-y-2">
+          <div className="w-full rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl p-1">
+            <Image
+              src="/images/project_members.png"
+              alt="Pengaturan Proyek - Daftar Anggota & Invite Code"
+              width={1024}
+              height={550}
+              className="w-full h-auto rounded-xl object-contain"
+              priority
+              unoptimized
+            />
+          </div>
+          <p className="text-center text-xs text-zinc-400 font-mono">
+            Tampilan Antarmuka Pengaturan Proyek - Daftar Anggota Proyek, Peran (Owner/Admin/Member), & Invite Code Active
+          </p>
+        </div>
+
+        <div className="space-y-2">
+          <div className="w-full rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl p-1">
+            <Image
+              src="/images/join_project.png"
+              alt="Join Project Menggunakan Invite Code Modal"
+              width={1024}
+              height={550}
+              className="w-full h-auto rounded-xl object-contain"
+              unoptimized
+            />
+          </div>
+          <p className="text-center text-xs text-zinc-400 font-mono">
+            Tampilan Antarmuka Form Join Project - Bergabung ke Proyek Menggunakan Invite Code
+          </p>
+        </div>
+      </div>
         <ol className="space-y-2 text-xs sm:text-sm text-zinc-300 list-decimal list-inside leading-relaxed">
           <li>Buka papan proyek yang telah dibuat, lalu klik menu <strong>Pengaturan Proyek</strong> (ikon roda gigi).</li>
           <li>Pilih tab <strong>Anggota & Kolaborator</strong>.</li>
@@ -650,7 +683,22 @@ function AdvancedPageContent() {
           <ShieldCheck className="w-5 h-5 text-emerald-400" />
           <span>1. Role-Based Access Control (RBAC) & Workflow Approval</span>
         </h2>
-        <ImagePlaceholder caption="Matriks Hak Akses RBAC & Modul Otorisasi Approval Workflow" />
+      <div className="my-6 space-y-2">
+        <div className="w-full rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl p-1">
+          <Image
+            src="/images/project_members.png"
+            alt="Matriks Hak Akses RBAC & Modul Otorisasi Approval Workflow"
+            width={1024}
+            height={550}
+            className="w-full h-auto rounded-xl object-contain"
+            priority
+            unoptimized
+          />
+        </div>
+        <p className="text-center text-xs text-zinc-400 font-mono">
+          Tampilan Antarmuka Asli Matriks Hak Akses RBAC & Pengaturan Role Anggota Proyek TaskTuntas
+        </p>
+      </div>
         <ul className="space-y-2 text-xs sm:text-sm text-zinc-300 list-disc list-inside">
           <li><strong className="text-zinc-100">Keamanan Granular:</strong> Pengaturan otorisasi berbasis matriks hak akses (<em>Access Control Matrix</em>) yang mengisolasi tindakan sensitif berdasarkan peran pengguna (<strong>Admin</strong>, <strong>Project Manager</strong>, <strong>Developer</strong>, <strong>External Client</strong>).</li>
           <li><strong className="text-zinc-100">Approval Hierarchy System:</strong>
