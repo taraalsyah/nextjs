@@ -709,7 +709,22 @@ function AdvancedPageContent() {
           <BarChart3 className="w-5 h-5 text-emerald-400" />
           <span>2. Dasbor Analitik & Laporan Produktivitas</span>
         </h2>
-        <ImagePlaceholder caption="Dasbor Analitik - Grafik Burndown Chart & Distribusi Beban Kerja" />
+      <div className="my-6 space-y-2">
+        <div className="w-full rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl p-1">
+          <Image
+            src="/images/analytics_report.png"
+            alt="Dasbor Analitik Laporan & Statistik Task TaskTuntas"
+            width={1753}
+            height={1238}
+            className="w-full h-auto rounded-xl object-contain"
+            priority
+            unoptimized
+          />
+        </div>
+        <p className="text-center text-xs text-zinc-400 font-mono">
+          Tampilan Antarmuka Asli Dasbor Laporan & Statistik Task (Metrik Status, Overdue Task, & Distribusi Prioritas/Kategori) TaskTuntas
+        </p>
+      </div>
         <ul className="space-y-2 text-xs sm:text-sm text-zinc-300 list-disc list-inside">
           <li><strong className="text-zinc-100">Burndown & Burnup Chart:</strong> Grafik real-time yang memetakan kecepatan penyelesaian tugas (<em>velocity rate</em>) terhadap estimasi waktu tersisa.</li>
           <li><strong className="text-zinc-100">Workload Allocation Matrix:</strong> Visualisasi sebaran beban kerja guna mencegah <em>burnout</em> atau ketimpangan alokasi tugas pada anggota tim tertentu.</li>
