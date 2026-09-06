@@ -508,7 +508,22 @@ function FeaturesPageContent() {
           </ul>
         </div>
 
-        <ImagePlaceholder caption="Tampilan Mode Kalender - Sebaran Due Date Tugas Proyek" />
+      <div className="my-6 space-y-2">
+        <div className="w-full rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl p-1">
+          <Image
+            src="/images/calendar_view.png"
+            alt="TaskTuntas Calendar Deadline View Screenshot"
+            width={1024}
+            height={550}
+            className="w-full h-auto rounded-xl object-contain"
+            priority
+            unoptimized
+          />
+        </div>
+        <p className="text-center text-xs text-zinc-400 font-mono">
+          Tampilan Antarmuka Asli Mode Kalender - Sebaran Due Date Tugas Proyek TaskTuntas
+        </p>
+      </div>
 
         {/* 5. Sub-task */}
         <div className="space-y-2 pt-4 border-t border-zinc-800/60">
