@@ -876,16 +876,17 @@ function AdvancedPageContent() {
         </ul>
       </section>
 
-      {/* 3. Custom Tags */}
+      {/* 3. Custom Categories */}
       <section className="space-y-3 pt-6 border-t border-zinc-800/60">
         <h2 className="text-lg font-semibold text-zinc-100 flex items-center gap-2">
           <Tag className="w-5 h-5 text-emerald-400" />
-          <span>3. Custom Tags & System Filtering</span>
+          <span>3. Kategori Kustom per Proyek & System Filtering</span>
         </h2>
-        <ImagePlaceholder caption="Panel Filter Multi-Kriteria & Pengaturan Custom Tags Berwarna" />
+        <ImagePlaceholder caption="Panel Pengaturan Kategori Kustom Proyek & Multi-Filter Engine" />
         <ul className="space-y-2 text-xs sm:text-sm text-zinc-300 list-disc list-inside">
-          <li><strong className="text-zinc-100">Dynamic Tagging System:</strong> Pengelompokan tugas menggunakan tag berpola warna (<em>color-coded labels</em>) yang kustom (contoh: <code className="px-1.5 py-0.5 rounded bg-zinc-800 text-zinc-300 text-xs">Frontend</code>, <code className="px-1.5 py-0.5 rounded bg-zinc-800 text-zinc-300 text-xs">Backend</code>, <code className="px-1.5 py-0.5 rounded bg-zinc-800 text-zinc-300 text-xs">API-Integration</code>, <code className="px-1.5 py-0.5 rounded bg-zinc-800 text-zinc-300 text-xs">Critical-Bug</code>).</li>
-          <li><strong className="text-zinc-100">Multi-Filter Engine:</strong> Mesin pencarian tingkat lanjut yang memungkinkan penyaringan data berdasarkan kombinasi variabel kompleks (Assignee, Priority, Tags, & Range Date).</li>
+          <li><strong className="text-zinc-100">Project-Scoped Custom Categories:</strong> Setiap proyek memiliki kebebasan penuh untuk mendefinisikan dan mengelola daftar kategori kustom sendiri yang terisolasi sesuai kebutuhan alur kerja unik proyek tersebut (contoh: <code className="px-1.5 py-0.5 rounded bg-zinc-800 text-zinc-300 text-xs">Frontend</code>, <code className="px-1.5 py-0.5 rounded bg-zinc-800 text-zinc-300 text-xs">Backend API</code>, <code className="px-1.5 py-0.5 rounded bg-zinc-800 text-zinc-300 text-xs">UI/UX Design</code>, <code className="px-1.5 py-0.5 rounded bg-zinc-800 text-zinc-300 text-xs">Critical Bug</code>, <code className="px-1.5 py-0.5 rounded bg-zinc-800 text-zinc-300 text-xs">DevOps</code>).</li>
+          <li><strong className="text-zinc-100">Color-Coded Visual Labels:</strong> Penataan skema warna kustom (*color-coded badges*) untuk setiap kategori guna mempermudah pembedaan dan pemindaian tugas secara visual pada papan Kanban, tabel daftar tugas, maupun tampilan Kalender.</li>
+          <li><strong className="text-zinc-100">Multi-Filter & Search Engine:</strong> Mesin penyaringan tingkat lanjut yang memungkinkan pencarian data tugas secara presisi berdasarkan kombinasi variabel independen (Kategori Kustom Proyek, Assignee, Tingkat Prioritas, & Rentang Waktu Due Date).</li>
         </ul>
       </section>
 
