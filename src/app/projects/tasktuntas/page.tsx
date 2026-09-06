@@ -465,7 +465,22 @@ function FeaturesPageContent() {
           </ul>
         </div>
 
-        <ImagePlaceholder caption="Modal Detail Tugas - Form Penugasan Assignee, Prioritas, & Estimasi Waktu" />
+      <div className="my-6 space-y-2">
+        <div className="w-full rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl p-1">
+          <Image
+            src="/images/task_modal.png"
+            alt="TaskTuntas Form Buat Task Baru / Detail Tugas Modal"
+            width={1024}
+            height={550}
+            className="w-full h-auto rounded-xl object-contain"
+            priority
+            unoptimized
+          />
+        </div>
+        <p className="text-center text-xs text-zinc-400 font-mono">
+          Tampilan Antarmuka Asli Form Buat Task Baru / Detail Tugas Modal TaskTuntas
+        </p>
+      </div>
 
         {/* 3. Ruang Diskusi */}
         <div className="space-y-2 pt-4 border-t border-zinc-800/60">
