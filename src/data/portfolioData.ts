@@ -34,9 +34,9 @@ export interface PersonalInfo {
 
 export const personalInfo: PersonalInfo = {
   name: "Tara Alsyah",
-  role: "",
-  tagline: "Membangun Pengalaman Web yang Modern, Responsif, dan Berkinerja Tinggi",
-  bio: "Spesialis dalam ekosistem React, Next.js, dan Web UI modern. Berfokus pada arsitektur komponen yang bersih, performa tinggi, aksesibilitas, dan antarmuka pengguna yang terstruktur.",
+  role: "App Support & Web Dev",
+  tagline: "Membangun & Memelihara Solusi Web & Aplikasi Berkinerja Tinggi",
+  bio: "Profesional di bidang IT Support dan Application Support dengan keahlian pengembangan Web (Next.js, Django). Berpengalaman dalam pemeliharaan aplikasi, pemantauan sistem, analisis log error, serta konfigurasi server Linux.",
   location: "Jakarta, Indonesia",
   status: "Terbuka untuk Peluang Freelance & Full-time",
   resumeUrl: "/cv-tara-alsyah.pdf",
