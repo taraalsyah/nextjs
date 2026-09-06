@@ -654,6 +654,113 @@ function UserFlowPageContent() {
   );
 }
 
+const analyticsSlides = [
+  {
+    src: '/images/analytics_report_page_1.png',
+    alt: 'Dasbor Analitik Laporan & Statistik Task - Halaman 1',
+    title: 'Halaman 1: Ringkasan Metrik Utama & Daftar Overdue Task',
+    description: 'Tampilan Metrik Utama (Total Tasks, Done, In Progress, Overdue), Statistik Status Task, Daftar Detail Overdue Task, & Opsi Cetak Laporan PDF/CSV.',
+  },
+  {
+    src: '/images/analytics_report_page_2.png',
+    alt: 'Dasbor Analitik Laporan & Statistik Task - Halaman 2',
+    title: 'Halaman 2: Distribusi Prioritas & Matriks Beban Kerja Tim',
+    description: 'Visualisasi Grafis Distribusi Prioritas/Kategori Tugas & Matriks Alokasi Beban Kerja per Anggota Tim (Assignee Workload Matrix).',
+  },
+];
+
+function AnalyticsCarousel() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev === 0 ? analyticsSlides.length - 1 : prev - 1));
+  };
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev === analyticsSlides.length - 1 ? 0 : prev + 1));
+  };
+
+  const current = analyticsSlides[currentIndex];
+
+  return (
+    <div className="my-6 space-y-3">
+      <div className="relative w-full rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900/90 shadow-2xl p-2 group">
+        {/* Slide Counter Badge */}
+        <div className="absolute top-4 right-4 z-10 px-3 py-1 rounded-full bg-zinc-950/80 border border-zinc-700/80 text-zinc-300 text-xs font-mono backdrop-blur-md">
+          {currentIndex + 1} / {analyticsSlides.length}
+        </div>
+
+        {/* Slide Image Container */}
+        <div className="relative w-full min-h-[300px] flex items-center justify-center bg-zinc-950/50 rounded-xl overflow-hidden p-2">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentIndex}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              transition={{ duration: 0.25 }}
+              className="w-full flex justify-center"
+            >
+              <Image
+                src={current.src}
+                alt={current.alt}
+                width={1684}
+                height={1190}
+                className="w-full h-auto max-h-[520px] object-contain rounded-lg shadow-lg"
+                unoptimized
+              />
+            </motion.div>
+          </AnimatePresence>
+        </div>
+
+        {/* Left Control Arrow */}
+        <button
+          onClick={prevSlide}
+          aria-label="Previous Slide"
+          className="absolute left-4 top-1/2 -translate-y-1/2 p-2.5 rounded-full bg-zinc-950/80 border border-zinc-700/80 text-zinc-200 hover:text-white hover:bg-zinc-800 transition-all shadow-xl hover:scale-105 active:scale-95 z-20"
+        >
+          <ChevronLeft className="w-5 h-5" />
+        </button>
+
+        {/* Right Control Arrow */}
+        <button
+          onClick={nextSlide}
+          aria-label="Next Slide"
+          className="absolute right-4 top-1/2 -translate-y-1/2 p-2.5 rounded-full bg-zinc-950/80 border border-zinc-700/80 text-zinc-200 hover:text-white hover:bg-zinc-800 transition-all shadow-xl hover:scale-105 active:scale-95 z-20"
+        >
+          <ChevronRight className="w-5 h-5" />
+        </button>
+
+        {/* Indicators Dots */}
+        <div className="flex items-center justify-center gap-2 pt-3 pb-1">
+          {analyticsSlides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              aria-label={`Go to slide ${index + 1}`}
+              className={`h-2 rounded-full transition-all duration-300 ${
+                currentIndex === index
+                  ? 'w-8 bg-emerald-400'
+                  : 'w-2 bg-zinc-700 hover:bg-zinc-500'
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Slide Caption */}
+      <div className="text-center space-y-1 bg-zinc-900/60 border border-zinc-800/60 rounded-xl p-3">
+        <p className="text-xs sm:text-sm font-semibold text-emerald-400">
+          {current.title}
+        </p>
+        <p className="text-xs text-zinc-400 font-mono">
+          {current.description}
+        </p>
+      </div>
+    </div>
+  );
+}
+
 const notificationSlides = [
   {
     src: '/images/notification_overdue.png',
@@ -828,42 +935,7 @@ function AdvancedPageContent() {
           <BarChart3 className="w-5 h-5 text-emerald-400" />
           <span>2. Dasbor Analitik & Laporan Produktivitas</span>
         </h2>
-      <div className="my-6 space-y-6">
-        {/* Halaman 1 */}
-        <div className="space-y-2">
-          <div className="w-full rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl p-1">
-            <Image
-              src="/images/analytics_report_page_1.png"
-              alt="Dasbor Analitik Laporan & Statistik Task - Halaman 1"
-              width={1684}
-              height={1190}
-              className="w-full h-auto rounded-xl object-contain"
-              priority
-              unoptimized
-            />
-          </div>
-          <p className="text-center text-xs text-zinc-400 font-mono">
-            Halaman 1: Tampilan Metrik Utama, Statistik Status Task, Daftar Overdue Task, & Opsi Cetak Laporan
-          </p>
-        </div>
-
-        {/* Halaman 2 */}
-        <div className="space-y-2">
-          <div className="w-full rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl p-1">
-            <Image
-              src="/images/analytics_report_page_2.png"
-              alt="Dasbor Analitik Laporan & Statistik Task - Halaman 2"
-              width={1684}
-              height={1190}
-              className="w-full h-auto rounded-xl object-contain"
-              unoptimized
-            />
-          </div>
-          <p className="text-center text-xs text-zinc-400 font-mono">
-            Halaman 2: Visualisasi Grafis Distribusi Prioritas / Kategori & Matrix Beban Kerja Anggota Tim (Assignee Workload)
-          </p>
-        </div>
-      </div>
+        <AnalyticsCarousel />
         <ul className="space-y-2 text-xs sm:text-sm text-zinc-300 list-disc list-inside">
           <li><strong className="text-zinc-100">Burndown & Burnup Chart:</strong> Grafik real-time yang memetakan kecepatan penyelesaian tugas (<em>velocity rate</em>) terhadap estimasi waktu tersisa.</li>
           <li><strong className="text-zinc-100">Workload Allocation Matrix:</strong> Visualisasi sebaran beban kerja guna mencegah <em>burnout</em> atau ketimpangan alokasi tugas pada anggota tim tertentu.</li>
