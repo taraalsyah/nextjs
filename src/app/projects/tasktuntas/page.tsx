@@ -593,7 +593,7 @@ function UserFlowPageContent() {
 
       {/* Langkah 2 */}
       <section className="space-y-4 pt-6 border-t border-zinc-800/60">
-        <h2 className="text-xl font-semibold text-zinc-100">Langkah 2: Mengundang Kolaborator & Pengaturan Peran</h2>
+        <h2 className="text-xl font-semibold text-zinc-100">Langkah 2: Kolaborasi Proyek via Kode Invite & Approval Join</h2>
       <div className="my-6 space-y-4">
         <div className="space-y-2">
           <div className="w-full rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl p-1">
@@ -608,7 +608,7 @@ function UserFlowPageContent() {
             />
           </div>
           <p className="text-center text-xs text-zinc-400 font-mono">
-            Tampilan Antarmuka Pengaturan Proyek - Daftar Anggota Proyek, Peran (Owner/Admin/Member), & Invite Code Active
+            Tampilan Antarmuka Pengaturan Proyek - Generator Kode Invite Active & Kelola Daftar Anggota Proyek
           </p>
         </div>
 
@@ -624,23 +624,16 @@ function UserFlowPageContent() {
             />
           </div>
           <p className="text-center text-xs text-zinc-400 font-mono">
-            Tampilan Antarmuka Form Join Project - Bergabung ke Proyek Menggunakan Invite Code
+            Tampilan Antarmuka Form Join Project - Pengajuan Request Join Menggunakan Kode Invite Proyek
           </p>
         </div>
       </div>
         <ol className="space-y-2 text-xs sm:text-sm text-zinc-300 list-decimal list-inside leading-relaxed">
-          <li>Buka papan proyek yang telah dibuat, lalu klik menu <strong>Pengaturan Proyek</strong> (ikon roda gigi).</li>
-          <li>Pilih tab <strong>Anggota & Kolaborator</strong>.</li>
-          <li>Klik tombol <strong>+ Undang Anggota</strong>.</li>
-          <li>Masukkan alamat email anggota tim yang ingin diundang.</li>
-          <li>Tentukan tingkatan hak akses pada dropdown <strong>Peran (Role)</strong>:
-            <ul className="pl-6 space-y-1 my-1 list-disc">
-              <li><strong className="text-zinc-100">Admin:</strong> Akses penuh ke pengaturan proyek, anggaran, dan hapus workspace.</li>
-              <li><strong className="text-zinc-100">Member:</strong> Dapat membuat, mengedit, dan menggeser kartu tugas.</li>
-              <li><strong className="text-zinc-100">Viewer:</strong> Akses <em>read-only</em> untuk memantau progres tanpa hak edit.</li>
-            </ul>
-          </li>
-          <li>Klik <strong>Kirim Undangan</strong>. Notifikasi email otomatis akan dikirimkan kepada calon anggota.</li>
+          <li>Owner proyek membuka menu <strong>Pengaturan Proyek</strong> (ikon roda gigi) lalu memilih tab <strong>Anggota</strong>.</li>
+          <li>Owner membuat dan mengaktifkan <strong>Kode Invite Proyek</strong> (misal: <code className="px-1.5 py-0.5 rounded bg-zinc-800 text-zinc-300 font-mono text-xs">PM-2MLX-5S3X</code>) yang dapat disalin (<em>Copy Invite Code</em>) atau diperbarui kapan saja (<em>Regenerate Invite Code</em>).</li>
+          <li>User/kolaborator yang ingin bergabung membuka modal <strong>Join Project</strong> lalu memasukkan <strong>Invite Code</strong> tersebut untuk mengajukan permintaan bergabung (<em>Request Join</em>).</li>
+          <li>Owner proyek menerima pengajuan di tab <strong>Join Requests</strong> pada Pengaturan Proyek untuk melakukan peninjauan dan persetujuan (<strong>Approval</strong>).</li>
+          <li>Setelah disetujui, user resmi terdaftar pada <strong>Daftar Anggota Proyek</strong> dengan hak akses peran (<em>Owner</em>, <em>Admin</em>, atau <em>Member</em>) yang dikelola secara terstruktur.</li>
         </ol>
       </section>
 
