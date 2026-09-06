@@ -679,8 +679,8 @@ function AdvancedPageContent() {
       <div className="my-6 space-y-2">
         <div className="w-full rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl p-1">
           <Image
-            src="/images/project_members.png"
-            alt="Matriks Hak Akses RBAC & Modul Otorisasi Approval Workflow"
+            src="/images/rbac_matrix.png"
+            alt="Configurable Project Role Permission Matrix RBAC TaskTuntas"
             width={1024}
             height={550}
             className="w-full h-auto rounded-xl object-contain"
@@ -689,7 +689,7 @@ function AdvancedPageContent() {
           />
         </div>
         <p className="text-center text-xs text-zinc-400 font-mono">
-          Tampilan Antarmuka Asli Matriks Hak Akses RBAC & Pengaturan Role Anggota Proyek TaskTuntas
+          Tampilan Antarmuka Asli Configurable Project Role Permission Matrix RBAC (Owner, Admin, Member, Viewer) TaskTuntas
         </p>
       </div>
         <ul className="space-y-2 text-xs sm:text-sm text-zinc-300 list-disc list-inside">
