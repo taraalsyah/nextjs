@@ -882,7 +882,21 @@ function AdvancedPageContent() {
           <Tag className="w-5 h-5 text-emerald-400" />
           <span>3. Kategori Kustom per Proyek & System Filtering</span>
         </h2>
-        <ImagePlaceholder caption="Panel Pengaturan Kategori Kustom Proyek & Multi-Filter Engine" />
+        <div className="my-6 space-y-2">
+          <div className="w-full rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl p-1">
+            <Image
+              src="/images/project_categories.png"
+              alt="Panel Pengaturan Kategori Kustom Proyek TaskTuntas"
+              width={1344}
+              height={760}
+              className="w-full h-auto rounded-xl object-contain"
+              unoptimized
+            />
+          </div>
+          <p className="text-center text-xs text-zinc-400 font-mono">
+            Tampilan Antarmuka Asli Panel Pengaturan Kategori Tugas (Task Categories — Web Portofolio Tara &apos;A&apos;) TaskTuntas
+          </p>
+        </div>
         <ul className="space-y-2 text-xs sm:text-sm text-zinc-300 list-disc list-inside">
           <li><strong className="text-zinc-100">Project-Scoped Custom Categories:</strong> Setiap proyek memiliki kebebasan penuh untuk mendefinisikan dan mengelola daftar kategori kustom sendiri yang terisolasi sesuai kebutuhan alur kerja unik proyek tersebut (contoh: <code className="px-1.5 py-0.5 rounded bg-zinc-800 text-zinc-300 text-xs">Frontend</code>, <code className="px-1.5 py-0.5 rounded bg-zinc-800 text-zinc-300 text-xs">Backend API</code>, <code className="px-1.5 py-0.5 rounded bg-zinc-800 text-zinc-300 text-xs">UI/UX Design</code>, <code className="px-1.5 py-0.5 rounded bg-zinc-800 text-zinc-300 text-xs">Critical Bug</code>, <code className="px-1.5 py-0.5 rounded bg-zinc-800 text-zinc-300 text-xs">DevOps</code>).</li>
           <li><strong className="text-zinc-100">Color-Coded Visual Labels:</strong> Penataan skema warna kustom (*color-coded badges*) untuk setiap kategori guna mempermudah pembedaan dan pemindaian tugas secara visual pada papan Kanban, tabel daftar tugas, maupun tampilan Kalender.</li>
