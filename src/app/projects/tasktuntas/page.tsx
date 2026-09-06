@@ -361,7 +361,22 @@ function OverviewPageContent() {
         </p>
       </div>
 
-      <ImagePlaceholder caption="Dashboard Utama TaskTuntas - Tampilan Papan Kerja & Ringkasan Proyek" />
+      <div className="my-6 space-y-2">
+        <div className="w-full rounded-2xl overflow-hidden border border-zinc-800/90 bg-zinc-950 shadow-[0_20px_50px_rgba(0,0,0,0.85)] ring-1 ring-white/10 p-1">
+          <Image
+            src="/images/kanban_board.png"
+            alt="Dashboard Utama TaskTuntas - Tampilan Papan Kerja & Ringkasan Proyek"
+            width={1024}
+            height={550}
+            className="w-full h-auto rounded-xl object-contain [image-rendering:-webkit-optimize-contrast]"
+            priority
+            unoptimized
+          />
+        </div>
+        <p className="text-center text-xs text-zinc-400 font-mono">
+          Tampilan Antarmuka Asli Dashboard Utama & Interactive Kanban Board TaskTuntas
+        </p>
+      </div>
 
       <section className="space-y-4">
         <h2 className="text-xl font-semibold text-zinc-100">Tujuan & Latar Belakang</h2>
@@ -394,11 +409,32 @@ function OverviewPageContent() {
       </section>
 
       <section className="space-y-4">
-        <h2 className="text-xl font-semibold text-zinc-100">Arsitektur Ringkas Sistem</h2>
-        <div className="p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 space-y-3 text-xs sm:text-sm text-zinc-300">
-          <div><strong className="text-zinc-100">Frontend:</strong> Next.js (App Router), TypeScript, Tailwind CSS, Framer Motion.</div>
-          <div><strong className="text-zinc-100">Backend & Database:</strong> Django REST Framework / Node.js, PostgreSQL / MySQL, Redis Caching.</div>
-          <div><strong className="text-zinc-100">Otentikasi & Keamanan:</strong> JWT Authentication, Role-Based Access Control (RBAC).</div>
+        <h2 className="text-xl font-semibold text-zinc-100">Arsitektur Teknologi Utama</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm">
+          <div className="p-3.5 rounded-xl border border-zinc-800/80 bg-zinc-900/60">
+            <h3 className="font-semibold text-zinc-100 mb-1">Frontend & UI State</h3>
+            <p className="text-zinc-400 text-xs leading-normal">
+              Next.js (App Router), TypeScript, React Server Components, Tailwind CSS, & Framer Motion untuk animasi papan kerja yang responsif.
+            </p>
+          </div>
+          <div className="p-3.5 rounded-xl border border-zinc-800/80 bg-zinc-900/60">
+            <h3 className="font-semibold text-zinc-100 mb-1">Backend & Database</h3>
+            <p className="text-zinc-400 text-xs leading-normal">
+              Node.js, Prisma ORM, PostgreSQL dengan indeks pencarian teks penuh (*full-text search*), & Redis Caching Layer.
+            </p>
+          </div>
+          <div className="p-3.5 rounded-xl border border-zinc-800/80 bg-zinc-900/60">
+            <h3 className="font-semibold text-zinc-100 mb-1">Autentikasi & Otorisasi</h3>
+            <p className="text-zinc-400 text-xs leading-normal">
+              NextAuth.js (OAuth2 + JWT Session), Matriks Hak Akses RBAC Granular, & Encrypted Secret Vault.
+            </p>
+          </div>
+          <div className="p-3.5 rounded-xl border border-zinc-800/80 bg-zinc-900/60">
+            <h3 className="font-semibold text-zinc-100 mb-1">Otomatisasi & Integrasi</h3>
+            <p className="text-zinc-400 text-xs leading-normal">
+              Event-driven Webhook Engine, Bot Notifikasi Telegram/Slack, & Generator PDF Report eksekutif.
+            </p>
+          </div>
         </div>
       </section>
     </article>
@@ -422,13 +458,13 @@ function FeaturesPageContent() {
       </div>
 
       <div className="my-6 space-y-2">
-        <div className="w-full rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl p-1">
+        <div className="w-full rounded-2xl overflow-hidden border border-zinc-800/90 bg-zinc-950 shadow-[0_20px_50px_rgba(0,0,0,0.85)] ring-1 ring-white/10 p-1">
           <Image
             src="/images/kanban_board.png"
             alt="TaskTuntas Interactive Kanban Board Screenshot"
             width={1024}
             height={550}
-            className="w-full h-auto rounded-xl object-contain"
+            className="w-full h-auto rounded-xl object-contain [image-rendering:-webkit-optimize-contrast]"
             priority
             unoptimized
           />
@@ -466,13 +502,13 @@ function FeaturesPageContent() {
         </div>
 
       <div className="my-6 space-y-2">
-        <div className="w-full rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl p-1">
+        <div className="w-full rounded-2xl overflow-hidden border border-zinc-800/90 bg-zinc-950 shadow-[0_20px_50px_rgba(0,0,0,0.85)] ring-1 ring-white/10 p-1">
           <Image
             src="/images/task_modal.png"
             alt="TaskTuntas Form Buat Task Baru / Detail Tugas Modal"
             width={1024}
             height={550}
-            className="w-full h-auto rounded-xl object-contain"
+            className="w-full h-auto rounded-xl object-contain [image-rendering:-webkit-optimize-contrast]"
             priority
             unoptimized
           />
@@ -509,13 +545,13 @@ function FeaturesPageContent() {
         </div>
 
       <div className="my-6 space-y-2">
-        <div className="w-full rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl p-1">
+        <div className="w-full rounded-2xl overflow-hidden border border-zinc-800/90 bg-zinc-950 shadow-[0_20px_50px_rgba(0,0,0,0.85)] ring-1 ring-white/10 p-1">
           <Image
             src="/images/calendar_view.png"
             alt="TaskTuntas Calendar Deadline View Screenshot"
             width={1024}
             height={550}
-            className="w-full h-auto rounded-xl object-contain"
+            className="w-full h-auto rounded-xl object-contain [image-rendering:-webkit-optimize-contrast]"
             priority
             unoptimized
           />
@@ -668,13 +704,13 @@ function UserFlowPageContent() {
       <section className="space-y-4">
         <h2 className="text-xl font-semibold text-zinc-100">Langkah 1: Membuat Proyek Baru</h2>
       <div className="my-6 space-y-2">
-        <div className="w-full rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl p-1">
+        <div className="w-full rounded-2xl overflow-hidden border border-zinc-800/90 bg-zinc-950 shadow-[0_20px_50px_rgba(0,0,0,0.85)] ring-1 ring-white/10 p-1">
           <Image
             src="/images/create_project_modal.png"
             alt="TaskTuntas Form Pembuatan Proyek Baru Modal Screenshot"
             width={1024}
             height={550}
-            className="w-full h-auto rounded-xl object-contain"
+            className="w-full h-auto rounded-xl object-contain [image-rendering:-webkit-optimize-contrast]"
             priority
             unoptimized
           />
@@ -714,7 +750,21 @@ function UserFlowPageContent() {
       {/* Langkah 3 */}
       <section className="space-y-4 pt-6 border-t border-zinc-800/60">
         <h2 className="text-xl font-semibold text-zinc-100">Langkah 3: Mengelola & Menyelesaikan Task</h2>
-        <ImagePlaceholder caption="Aksi Drag-and-Drop Kartu Tugas dari In Progress ke In Review" />
+        <div className="my-6 space-y-2">
+          <div className="w-full rounded-2xl overflow-hidden border border-zinc-800/90 bg-zinc-950 shadow-[0_20px_50px_rgba(0,0,0,0.85)] ring-1 ring-white/10 p-1">
+            <Image
+              src="/images/kanban_board.png"
+              alt="Papan Kerja Kanban - Pengelolaan Alur Pengerjaan Tugas TaskTuntas"
+              width={1024}
+              height={550}
+              className="w-full h-auto rounded-xl object-contain [image-rendering:-webkit-optimize-contrast]"
+              unoptimized
+            />
+          </div>
+          <p className="text-center text-xs text-zinc-400 font-mono">
+            Tampilan Antarmuka Asli Papan Kerja Kanban - Pemindahan Kartu Tugas (Drag-and-Drop) Antar Kolom Status
+          </p>
+        </div>
         <ol className="space-y-2 text-xs sm:text-sm text-zinc-300 list-decimal list-inside leading-relaxed">
           <li>Pada kolom <strong>To-Do</strong>, klik <strong>+ Tambah Tugas</strong>.</li>
           <li>Masukkan <strong>Judul Tugas</strong>, tentukan <strong>Assignee</strong>, isi <strong>Due Date</strong>, dan pilih <strong>Tag Prioritas</strong>. Klik <strong>Simpan</strong>.</li>
@@ -977,13 +1027,13 @@ function AdvancedPageContent() {
           <span>1. Role-Based Access Control (RBAC) & Workflow Approval</span>
         </h2>
       <div className="my-6 space-y-2">
-        <div className="w-full rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl p-1">
+        <div className="w-full rounded-2xl overflow-hidden border border-zinc-800/90 bg-zinc-950 shadow-[0_20px_50px_rgba(0,0,0,0.85)] ring-1 ring-white/10 p-1">
           <Image
             src="/images/rbac_matrix.png"
             alt="Configurable Project Role Permission Matrix RBAC TaskTuntas"
             width={1024}
             height={550}
-            className="w-full h-auto rounded-xl object-contain"
+            className="w-full h-auto rounded-xl object-contain [image-rendering:-webkit-optimize-contrast]"
             priority
             unoptimized
           />
@@ -1029,13 +1079,13 @@ function AdvancedPageContent() {
           <span>3. Kategori Kustom per Proyek & System Filtering</span>
         </h2>
         <div className="my-6 space-y-2">
-          <div className="w-full rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl p-1">
+          <div className="w-full rounded-2xl overflow-hidden border border-zinc-800/90 bg-zinc-950 shadow-[0_20px_50px_rgba(0,0,0,0.85)] ring-1 ring-white/10 p-1">
             <Image
               src="/images/project_categories.png"
               alt="Panel Pengaturan Kategori Kustom Proyek TaskTuntas"
               width={1344}
               height={760}
-              className="w-full h-auto rounded-xl object-contain"
+              className="w-full h-auto rounded-xl object-contain [image-rendering:-webkit-optimize-contrast]"
               unoptimized
             />
           </div>
